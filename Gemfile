@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+source :rubygems
 
 gem 'rails', '3.2'
-gem 'adhearsion', '1.2.3'
+gem "adhearsion", ">=2.0.0.alpha2"
 gem 'statgrab' unless `uname` =~ /Darwin/
 gem 'sys-filesystem'
 
@@ -25,6 +25,7 @@ group :test, :development do
   gem 'nokogiri'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '>= 2.8.1'
+  gem 'jasmine-rails'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-test'
@@ -49,23 +50,26 @@ group :production do
   gem 'mysql'
 end
 
-group :adhearsion do
-  gem 'adhearsion', '1.2.3'
-  gem 'activerecord-wrap-with-connection'
-end
 
-group :components do
-  gem 'ahn_hoptoad'
+group :adhearsion do
+  gem "adhearsion", ">=2.0.0.alpha2"
+  gem 'adhearsion-asterisk'
+  gem 'adhearsion-rails'
+  gem 'adhearsion-activerecord'
+  gem 'adhearsion-ldap'
+#  gem 'adhearsion-xmpp'
+  gem 'adhearsion-drb'
 end
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '~> 1.0.0'
   gem 'gherkin'
 end
 
 group :assets do
+  gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
