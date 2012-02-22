@@ -4,8 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
-init = Adhearsion::Initializer.new
-init.load_lib_folder
+#init = Adhearsion::Initializer.new
+#init.load_lib_folder
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
