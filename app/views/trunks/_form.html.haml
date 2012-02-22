@@ -1,0 +1,6 @@
+= semantic_form_for @trunk do |f|
+  = f.semantic_fields_for :sip_device do |sip_device|
+    = sip_device.input :name, :name => "Name"
+    = sip_device.input :secret, :name => "Password"
+  = f.actions do
+    = f.action :submit, :as => :input

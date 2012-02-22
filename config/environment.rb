@@ -4,7 +4,3 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 RubyRings::Application.initialize!
 
-#require 'rubygems'
-#require 'bundler'
-#Bundler.setup
-#Bundler.require

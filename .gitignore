@@ -11,6 +11,9 @@ config/adhearsion.rb
 log/*.log
 tmp
 
+#ignore pickler config
+features/tracker.yml
+
 # Some other things to ignore
 .*.swp
 .*.swo
