@@ -7,4 +7,4 @@ Feature: Admin should be able to define SIP trunks
   Scenario: Trunks
     Given I am a logged in as a pbx administrator
     When I create a SIP trunk named  "my_trunk"
-    Then I should see 'New SIP Trunk ("my_device") created'
+    Then I should see 'Succesfully created new SIP Trunk ("my_trunk")'

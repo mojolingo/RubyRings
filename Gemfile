@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'rails', '3.2'
-gem "adhearsion", ">=2.0.0.alpha2"
+#gem "adhearsion", ">=2.0.0.alpha2"
 #gem 'statgrab' unless `uname` =~ /Darwin/
 gem 'sys-filesystem'
 
@@ -64,6 +64,7 @@ group :adhearsion do
 end
 
 group :test do
+  gem 'webrat'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails', '~> 1.0.0'

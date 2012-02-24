@@ -1,6 +1,7 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
   factory :trunk do
+    name        'SuperITSP'
+    association :sip_device, :strategy => :build
   end
 end

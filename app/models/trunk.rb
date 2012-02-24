@@ -1,13 +1,13 @@
 class Trunk < ActiveRecord::Base
   belongs_to :sip_device
   accepts_nested_attributes_for :sip_device
+  attr_accessible :type, :name, :sip_device_attributes
+  after_initialize :configurate_trunks
 
-#  class << self
-#    def new_with_sip_device
-#      Trunk.new.tap do |t|
-#        t.sip_device = SipDevice.new
-#      end
-#    end
-#  end
+  validates_presence_of :name
 
+  private
+    def configurate_trunks
+      build_sip_device
+    end
 end
