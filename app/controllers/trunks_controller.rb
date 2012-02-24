@@ -3,7 +3,6 @@ class TrunksController < ApplicationController
 
   def new
     @trunk = Trunk.new
-    #respond_with @trunk.build_sip_device
     respond_with @trunk
   end
 

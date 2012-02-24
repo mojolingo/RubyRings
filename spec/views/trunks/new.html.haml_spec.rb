@@ -9,7 +9,6 @@ describe "/trunks/new" do
       :action => trunks_path
     ) do |form|
       form.should have_selector("input", :type => 'submit')
-    #  form.should have_selector("input", :name => 'commit', :type => 'submit', :value => 'Create Trunk')
     end
   end
 end
