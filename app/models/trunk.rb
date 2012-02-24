@@ -8,6 +8,8 @@ class Trunk < ActiveRecord::Base
 
   private
     def configurate_trunks
-      build_sip_device
+      if self.new_record?
+        build_sip_device
+      end
     end
 end
