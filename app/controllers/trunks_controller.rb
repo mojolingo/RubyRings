@@ -13,10 +13,18 @@ class TrunksController < ApplicationController
   end
 
   def index
+    @trunks = Trunk.all
     respond_with @trunks
   end
 
   def show
+    respond_with @trunk
+  end
+
+  def update
+    @trunk = Trunk.find(params[:id])
+    @trunk.update_attributes params[:trunk]
+    flash[:notice] = "Successfully updated SIP Trunk (#{@trunk.name})." if @trunk.save
     respond_with @trunk
   end
 

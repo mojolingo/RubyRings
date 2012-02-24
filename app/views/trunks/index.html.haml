@@ -1,2 +1,10 @@
-
 %p  Trunks
+%table.table
+  %tr
+    %th.first= "Name"
+    %th.last &nbsp;
+  - @trunks.each do |trunk|
+    %tr{:class => "trunk"}
+      %td.first= trunk.name
+      %td.last 
+        - links_helper_for(trunk)
