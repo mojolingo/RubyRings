@@ -1,4 +1,3 @@
 require 'spec_helper'
-  describe "trunks/index.html.haml" do
-  end
+describe "trunks/index.html.haml" do
 end
